@@ -27,7 +27,7 @@ async function getExchangeRate(from, to, amount = 1) {
 
 // ─── Skill: news-headlines ───────────────────────────────────────────────────
 async function getNewsHeadlines(topic, count = 5) {
-  const apiKey = process.env.GNEWS_API_KEY;
+  const apiKey = process.env.GNEWS_API_KEY || '546402d9cf0867fb394c24f701d456a5';
   if (!apiKey) throw new Error('GNEWS_API_KEY environment variable is not set.');
   const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(topic)}&max=${count}&lang=en&token=${apiKey}`;
   const res = await fetch(url);
