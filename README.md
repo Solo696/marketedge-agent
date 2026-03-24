@@ -6,17 +6,17 @@ A lightweight AgentHub agent with 3 skills: **crypto prices**, **currency exchan
 
 ## Step 1 — Get your free API key
 
-The only key you need is from **NewsAPI** (the other two APIs are completely free with no key):
+The only key you need is from **GNewsAPI** (the other two APIs are completely free with no key):
 
-1. Go to https://newsapi.org/register
+1. Go to (https://gnews.io/register)
 2. Sign up for a free account
 3. Copy your API key — you'll need it in Step 2
 
 ---
 
-## Step 2 — Deploy to Railway (recommended)
+## Step 2 — Deploy to Render (recommended)
 
-Railway is the easiest host — similar Git-push workflow to Vercel.
+Render is the easiest host — similar Git-push workflow to Vercel.
 
 ### 2a. Push your code to GitHub
 
@@ -27,27 +27,27 @@ git commit -m "init utility agent"
 gh repo create pinai-utility-agent --public --push
 ```
 
-### 2b. Deploy on Railway
+### 2b. Deploy on Render
 
-1. Go to https://railway.app and sign in with GitHub
+1. Go to (https://render.com/) and sign in with GitHub
 2. Click **New Project → Deploy from GitHub repo**
 3. Select your `pinai-utility-agent` repo
-4. Railway auto-detects Node.js and deploys
+4. Render auto-detects Node.js and deploys
 
-### 2c. Set environment variables in Railway dashboard
+### 2c. Set environment variables in Render dashboard
 
 Go to your project → **Variables** tab and add:
 
 | Key | Value |
 |-----|-------|
-| `NEWS_API_KEY` | your NewsAPI key from Step 1 |
+| `GNews_API_KEY` | your Gnews key from Step 1 |
 | `AGENT_NAME` | `utility-agent` (or any name you like) |
 
 Railway will redeploy automatically.
 
 ### 2d. Get your public URL
 
-Railway gives you a URL like: `https://pinai-utility-agent-production.up.railway.app`
+Render gives you a URL like: `https://pinai-utility-agent-production.up.railway.app`
 
 Test it:
 ```bash
