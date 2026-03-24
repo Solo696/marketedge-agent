@@ -84,7 +84,7 @@ app.post('/agent', async (req, res) => {
 app.get('/health', (_req, res) => {
   res.json({
     status: 'ok',
-    agent: process.env.AGENT_NAME || 'utility-agent',
+    agent: process.env.AGENT_NAME || 'marketedge-agent',
     skills: ['crypto-price', 'exchange-rate', 'news-headlines'],
     uptime_seconds: Math.floor(process.uptime()),
   });
